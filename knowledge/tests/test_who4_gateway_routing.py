@@ -32,6 +32,7 @@ class Who4GatewayRoutingTests(unittest.TestCase):
             r for r in self.who4_claims
             if any(
                 self.sources[p["source_id"]].get("artifact_locator", {}).get("revision") == ORACLE_REV
+                and p.get("examination", {}).get("conclusion_kind") == "direct"
                 for p in r["provenance"]
             )
         ]
@@ -46,11 +47,29 @@ class Who4GatewayRoutingTests(unittest.TestCase):
             self.assertIn(expected_reset, expr)
             self.assertIn("settle_ms=3000", expr)
             self.assertIn("zero interface-routed $06EC or $06E4", claim["statement"])
-            if claim["id"] in {"ownkb:claim:c074157", "ownkb:claim:c074160"}:
+            if claim["id"] in {"ownkb:claim:c074157", "ownkb:claim:c074160", "ownkb:claim:c074161",
+                                "ownkb:claim:c074162", "ownkb:claim:c074163", "ownkb:claim:c074168"}:
                 self.assertIn("reply=nack, verdict=out", claim["statement"])
             exam = next(p["examination"] for p in claim["provenance"] if "examination" in p)
             self.assertEqual("source_inspection", exam["method"])
             self.assertEqual("firmware", exam["implementation_role"])
+
+    def test_derived_guidance_retains_original_sources_and_firmware_scope(self) -> None:
+        claims = {c["id"]: c for c in self.claims}
+        expected_sources = {f"ownkb:source:s{n:06d}" for n in range(1190, 1202)}
+        for identity in ("ownkb:claim:c074169", "ownkb:claim:c074170"):
+            c = claims[identity]
+            self.assertEqual("implementation", c["applicability"]["domain"])
+            self.assertEqual("corroborated_interpretation", c["epistemic_status"])
+            expression = c["applicability"]["version"]["expression"]
+            self.assertIn(ORACLE_REV, expression)
+            self.assertIn("F450 FW 020010", expression)
+            self.assertIn("MyHomeServer1 FW 028206", expression)
+            support = [p for p in c["provenance"] if "examination" in p]
+            self.assertEqual(expected_sources, {p["source_id"] for p in support})
+            self.assertTrue(all(p["examination"]["method"] == "source_inspection" for p in support))
+            self.assertTrue(all(p["examination"]["conclusion_kind"] == "interpretation" for p in support))
+            self.assertTrue(all("execution" not in p["examination"] for p in support))
 
     def test_mh202_crash_and_trailing_token_behavior_is_explicit(self) -> None:
         mh202 = next(r for r in self.who4_claims if r["id"] == "ownkb:claim:c074167")
