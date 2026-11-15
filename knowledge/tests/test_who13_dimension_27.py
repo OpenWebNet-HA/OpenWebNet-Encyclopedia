@@ -43,26 +43,58 @@ class Who13Dimension27Tests(unittest.TestCase):
             if any(p["location"]["section_id"] == SECTION for p in r["provenance"])
         ]
 
-    def test_registry_absence_and_client_framing_boundary(self) -> None:
+    def test_database_coverage_and_client_framing_boundary(self) -> None:
         self.assertEqual(16, len(self.local))
         by_id = {r["id"]: r for r in self.local}
         absence = by_id["ownkb:claim:c074171"]
         self.assertEqual("observed", absence["epistemic_status"])
         self.assertEqual("3.5.38", absence["applicability"]["version"]["expression"])
-        self.assertTrue(any(p.get("source_id") == "ownkb:source:s000125" for p in absence["provenance"]))
+        self.assertEqual({"ownkb:source:s000125"}, {p["source_id"] for p in absence["provenance"]})
+        self.assertEqual("implementation", absence["applicability"]["domain"])
         self.assertIn("OPEN.db", absence["statement"])
+        self.assertIn("no associated EN_OPEN operation definitions", absence["statement"])
+        self.assertNotIn("SCS/TCP", absence["statement"])
+        self.assertNotIn("ZigBee", absence["statement"])
+        self.assertIn("Registered database inspection", self.review_text)
 
         boundary = by_id["ownkb:claim:c074186"]
         self.assertEqual("corroborated_interpretation", boundary["epistemic_status"])
-        self.assertEqual("protocol", boundary["applicability"]["domain"])
+        self.assertEqual("implementation", boundary["applicability"]["domain"])
         self.assertIn("*#13**27*#*#*1##", boundary["statement"])
         self.assertIn("HOST", boundary["statement"])
         self.assertIn("BTWEB", boundary["statement"])
 
+    def test_client_guidance_retains_original_evidence_and_bounded_scope(self) -> None:
+        boundary = next(c for c in self.local if c["id"] == "ownkb:claim:c074186")
+        version = boundary["applicability"]["version"]
+        self.assertEqual("specified", version["state"])
+        self.assertIn(MYHOME_REV, version["expression"])
+        self.assertIn(ORACLE_REV, version["expression"])
+        for model, (fw, *_rest) in EXPECTED_ORACLE.items():
+            self.assertIn(f"{model} FW {fw}", version["expression"])
+        for condition in ("F461 FW 2.0.11", "MyHomeServer1 FW 3.87.13",
+                          "oracle_version=3", "reset=each on F450", "reset=0 on the other 11",
+                          "settle_ms=3000", "factory/staged configurations"):
+            self.assertIn(condition, version["expression"])
+        supports = [p for p in boundary["provenance"] if "examination" in p]
+        self.assertEqual({f"ownkb:source:s{i:06}" for i in range(1202, 1216)},
+                         {p["source_id"] for p in supports})
+        for p in supports:
+            exam = p["examination"]
+            self.assertEqual("source_inspection", exam["method"])
+            self.assertEqual("interpretation", exam["conclusion_kind"])
+            self.assertEqual("client", exam["implementation_role"])
+            self.assertEqual([boundary["id"]], exam["claim_ids"])
+            self.assertTrue(exam["conditions"])
+            self.assertTrue(exam["limitations"])
+            self.assertNotIn("execution", exam)
+
     def test_physical_captures_preserve_exact_provenance_and_scope(self) -> None:
         physical = [
             r for r in self.local
-            if any(p["evidence_class"] == "public_capture" and "examination" in p for p in r["provenance"])
+            if any(p["evidence_class"] == "public_capture"
+                   and p.get("examination", {}).get("conclusion_kind") == "direct"
+                   for p in r["provenance"])
         ]
         self.assertEqual(2, len(physical))
         expected = {
@@ -97,7 +129,9 @@ class Who13Dimension27Tests(unittest.TestCase):
     def test_oracle_v3_matrix_covers_all_twelve_emulated_gateways(self) -> None:
         oracle_claims = [
             r for r in self.local
-            if any(p["evidence_class"] == "public_experiment" and "examination" in p for p in r["provenance"])
+            if any(p["evidence_class"] == "public_experiment"
+                   and p.get("examination", {}).get("conclusion_kind") == "direct"
+                   for p in r["provenance"])
         ]
         self.assertEqual(12, len(oracle_claims))
         seen_products = set()

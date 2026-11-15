@@ -46,3 +46,24 @@ Key cross-target observations:
 ## Identity and claim review
 
 Existing released document, section, chunk, claim, and source identities are preserved unchanged. One new section (`ownkb:section:d000036:s000018` in `functional/who-13-integration-gateway/dimensions.md`), one retrieval chunk (`ownkb:chunk:r007941`), one topic entity (`ownkb:entity:topic:d000036-s000018`), two pinned `OpenWebNet-HA/MyHOME` physical capture source records (`ownkb:source:s001202` and `ownkb:source:s001203`), 12 pinned `own-firmware-oracle` source records (`ownkb:source:s001204` through `ownkb:source:s001215`), and 16 scoped claims (`ownkb:claim:c074171` through `ownkb:claim:c074186`) are allocated strictly above both `main` and open `PR #52`. H1 root-section `section_sha256` pins on `ownkb:section:d000036:s000001` (`ownkb:claim:c001646` through `ownkb:claim:c001685`) are updated solely for the appended child-section list in the shared IR.
+
+## Registered database inspection
+
+A read-only inspection of the registered MyHOME Suite `3.5.38` `OPEN.db` source (`ownkb:source:s000125`, SHA-256 `d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051`, `80896` bytes) confirms that `EN_SYSTEM` contains the `WHO 13` entry and that it has no associated `EN_OPEN` operation definitions:
+
+```sql
+SELECT o.id_open, o.open_string
+FROM EN_SYSTEM s
+JOIN AS_OPEN_SYSTEM a USING(id_system)
+JOIN EN_OPEN o USING(id_open)
+WHERE CAST(s.who AS TEXT) = '13'
+ORDER BY o.id_open;
+```
+
+The query returns zero rows. The canonical registered fetch helper materialized the database in a temporary directory, verified its registered hash and size, and SQLite opened it read-only. No private database is copied into this repository. This supports only the database-coverage claim `ownkb:claim:c074171`. The earlier combined assertion about the classic SCS/TCP and ZigBee manuals is removed: those independent manual-absence assertions were not verified for this correction and are not inferred from `OPEN.db`.
+
+## Client guidance interpretation
+
+The derived client warning `ownkb:claim:c074186` retains all fourteen original pinned sources: two populated physical captures and twelve firmware-oracle result tables. Each source retains its original inspected span, conditions and limitations, with `source_inspection` as the method and `interpretation` as the conclusion kind. The physical captures and simulated-PIC firmware observations remain separate; neither a gateway nor an emulator was operated for this correction.
+
+The version scope names both physical capture revisions and all twelve oracle firmware/harness combinations. The empty-descriptor framing outcome is observed on `MH200 020102`, `MH200N 010108`, and `MyHomeServer1 028206` with their staged configurations; it is not generalized to the populated physical `MyHomeServer1 3.87.13`. Timeout/recovery and fallback-string handling are derived client recommendations, not published protocol requirements or guarantees for other firmware, configurations or character encodings. The existing sixteen claim IDs and fourteen source IDs remain unchanged.
