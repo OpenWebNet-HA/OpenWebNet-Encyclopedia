@@ -16397,6 +16397,26 @@ artifacts:
   notes:
   - The legacy Legrand software index identifies the MH200N distribution as FW_MH200N_vers_010108.
   - The official FWZ contains Info.txt and scheduler_rel_1_1_8.zip; the embedded scheduler payload is 10063605 bytes.
+- id: firmware-mh201-030644
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: MH201
+  title: MH201 IP Scenario Module firmware 030644
+  media_type: application/zip
+  filename: MH201_3_6_44.fwz
+  version_label: '030644'
+  size: 212187
+  sha256: 8972720b01d17ce9cfa2bcf2e20b55a44e7b349acb56ed52cd8121fdfccf2f63
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/MH201/030644.yaml
+  source_url: https://assets.legrand.com/pim/AUTRE/MH201_3_6_44.fwz
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/89/72/8972720b01d17ce9cfa2bcf2e20b55a44e7b349acb56ed52cd8121fdfccf2f63
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
+  - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
 - id: firmware-mh202-010024
   kind: firmware
   publisher: BTicino / Legrand
