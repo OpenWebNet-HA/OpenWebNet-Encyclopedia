@@ -16336,6 +16336,26 @@ artifacts:
   notes:
   - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
   - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
+- id: firmware-l4686sdk-012001
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: L4686SDK
+  title: L4686SDK / L4686/USB OpenWebNet Serial/USB Interface firmware 012001
+  media_type: application/zip
+  filename: 4686SDK_012001.fwz
+  version_label: '012001'
+  size: 63169
+  sha256: 381b75d99ab0b6ef91fe2fd1105685f97da65aa7f695d78b48e21b8f9518bd23
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/L4686SDK/012001.yaml
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=4686SDK_012001.fwz&fileId=58107.23188.33633.4751
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/38/1b/381b75d99ab0b6ef91fe2fd1105685f97da65aa7f695d78b48e21b8f9518bd23
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
+  - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
 - id: firmware-mh200-020102
   kind: firmware
   publisher: BTicino / Legrand
