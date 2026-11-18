@@ -16296,6 +16296,26 @@ artifacts:
     object_key: sha256/cb/6f/cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b
     visibility: private
   redistribution_status: private-archive-only
+- id: firmware-h4684-020054
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: H4684
+  title: colour touch screen firmware 020054
+  media_type: application/zip
+  filename: Version_2_0.zip
+  version_label: '020054'
+  size: 18746336
+  sha256: 41511712796cee61704f9d9cd1c85a14ce4fd6c8f5cea3b529d92117daf60e17
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/H4684/020054.yaml
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiDisplayColor/Versoin2_0(Current%20version)/Version%202_0.zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/41/51/41511712796cee61704f9d9cd1c85a14ce4fd6c8f5cea3b529d92117daf60e17
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
+  - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
 - id: firmware-mh200-020102
   kind: firmware
   publisher: BTicino / Legrand
