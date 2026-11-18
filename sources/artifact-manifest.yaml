@@ -16127,6 +16127,26 @@ artifacts:
   notes:
   - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
   - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
+- id: firmware-3550-030020
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: '3550'
+  title: temperature control central unit (99 zones) firmware 030020
+  media_type: application/zip
+  filename: Version_2_0.zip
+  version_label: '030020'
+  size: 9656492
+  sha256: c5dee2e9835e03da819b5e75b168890284fdbb17f9ec0e9588a3a308dfa33d04
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/3550/030020.yaml
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiThermo/Version%202_0%20(Current%20version)/Version%202_0.zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/c5/de/c5dee2e9835e03da819b5e75b168890284fdbb17f9ec0e9588a3a308dfa33d04
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
+  - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
 - id: firmware-f450-020010
   kind: firmware
   publisher: BTicino / Legrand
