@@ -16107,6 +16107,26 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-zero-crossing-le09287ab/LE09287AB.pdf
+- id: firmware-3488-030205
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: '3488'
+  title: HOMETOUCH 7" touch screen (SMARTDES) firmware 030205
+  media_type: application/zip
+  filename: SMARTDES_030205.fwz
+  version_label: '030205'
+  size: 167250224
+  sha256: c88d7215b2a1930aa1f206daa7f37f6f2e907bc519dd275da517a236a0101624
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/3488/030205.yaml
+  source_url: https://assets.legrand.com/pim/AUTRE/SMARTDES_030205.fwz
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/c8/8d/c88d7215b2a1930aa1f206daa7f37f6f2e907bc519dd275da517a236a0101624
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Downloaded from the pinned oracle catalog source on 2026-11-18; exact package size and SHA-256 verified.
+  - Original package and catalog firmware-image identities agree; private archive preservation only, no firmware execution, installation or mounted filesystem.
 - id: firmware-f450-020010
   kind: firmware
   publisher: BTicino / Legrand
