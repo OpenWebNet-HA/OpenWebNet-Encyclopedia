@@ -16270,6 +16270,28 @@ artifacts:
     object_key: sha256/bb/56/bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7
     visibility: private
   redistribution_status: private-archive-only
+- id: firmware-myhomeserver1-028206
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: MyHomeServer1
+  title: MyHomeServer1 firmware 2.82.06 (SMARTGW_028206)
+  media_type: application/zip
+  filename: SMARTGW_028206.fwz
+  version_label: 028206
+  size: 229511342
+  sha256: aa1cd393e4ae4262b3b2c4f9f25b8e831adbed648975505e2084c801f2b7f5e7
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/MyHomeServer1/028206.yaml
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=SMARTGW_028206.fwz&fileId=58107.23188.10378.49602
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/aa/1c/aa1cd393e4ae4262b3b2c4f9f25b8e831adbed648975505e2084c801f2b7f5e7
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Downloaded from the vendor on 2026-11-18; exact size and SHA-256 agree with the pinned own-firmware-oracle catalog.
+  - Archived through the established software upload helper; complete stored-object readback verified SHA-256 and size.
+  - Catalog identifies this as the early gdluck oracle image. Exact per-PIC_scsgate-corpus run linkage remains unverified.
+  - 'Archive preservation only: no extraction, installation, flashing or vendor-code execution.'
 - id: myhome-suite-3.5.38-device-1768-1.0-systems
   kind: reference-data
   publisher: BTICINO S.P.A. / LegrandGroup
