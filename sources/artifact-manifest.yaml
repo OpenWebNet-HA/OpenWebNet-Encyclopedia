@@ -16179,6 +16179,27 @@ artifacts:
     object_key: sha256/27/c5/27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f
     visibility: private
   redistribution_status: private-archive-only
+- id: firmware-f453-010100
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F453
+  title: F453 Enhanced Web Server 6 DIN firmware 010100
+  media_type: application/zip
+  filename: WS_6DIN_010100.fwz
+  version_label: '010100'
+  size: 11781988
+  sha256: da02a317e44827beef0b51fd65e4fdf4f53f36865eec85dbca130c14685ed626
+  source_page: https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/3c1634b00f8b165d1f63ddd4289171a9826ff501/catalog/F453/010100.yaml
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe#cookfs=default/resTargetDir4/devices/912_2.0_BT/cfgRestore/WS_6DIN_010100.fwz
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/da/02/da02a317e44827beef0b51fd65e4fdf4f53f36865eec85dbca130c14685ed626
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Extracted statically from archived MyHOME Suite3.5.38 installer (SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b), not downloaded separately.
+  - Exact CookFS member default/resTargetDir4/devices/912_2.0_BT/cfgRestore/WS_6DIN_010100.fwz and two ordered BitRock continuation chunks reconstructed; all selected page size/CRC checks and complete firmware SHA-256 passed.
+  - Standalone F453 FWZ is separately preserved in openwebnet-software; no installer, Tcl or vendor firmware execution.
 - id: firmware-f453av-030014
   kind: firmware
   publisher: BTicino / Legrand
