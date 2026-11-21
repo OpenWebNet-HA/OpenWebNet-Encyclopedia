@@ -27,14 +27,14 @@ Verified `rx` frames in that capture:
 | Line span | Frame | Semantic role in capture |
 | --- | --- | --- |
 | `1183..1194` | `*#4*1#3*#20*100##` | Spontaneous `#20` dimension write reporting `100` (`0%` proportional 0-10 V idle/OFF) for zone `1`, actuator `3` |
-| `1195..1207` | `*#4*1#3*20*100##` | `DIMENSION 20` status reply reporting `100` for zone `1`, actuator `3` |
+| `1195..1207` | `*#4*1#3*20*100##` | `DIMENSION 20` status reply reporting `100` for zone `1`, actuator `3`, 282.792 ms after its `#20` frame |
 | `1208..1220` | `*#4*2#3*#20*100##` | Spontaneous `#20` dimension write reporting `100` for zone `2`, actuator `3` |
-| `1221..1233` | `*#4*2#3*20*100##` | `DIMENSION 20` status reply reporting `100` ~45 ms after line `1208..1220` |
+| `1221..1233` | `*#4*2#3*20*100##` | `DIMENSION 20` status reply reporting `100` 24.241 ms after line `1208..1220` |
 | `1234..1246` | `*#4*2#3*20*100##` | Subsequent `DIMENSION 20` status reply reporting `100` for `2#3` |
 | `1625..1636` | `*#4*2#1*#20*0##` | Spontaneous `#20` dimension write reporting `0` (`OFF`) for zone `2`, actuator `1` |
-| `1637..1649` | `*#4*2#1*20*0##` | Paired `DIMENSION 20` status reply reporting `0` (`OFF`) for `2#1` |
+| `1637..1649` | `*#4*2#1*20*0##` | Paired `DIMENSION 20` status reply reporting `0` (`OFF`) for `2#1`, 17.264 ms after its `#20` frame |
 
-Across all live plant captures currently curated in the corpus, zero captures contain extended fan-coil OFF codes `14..16`, proportional codes `101..200`, discrete codes `10..13`, or discrete codes `17..22` (under `OpenWebNet-HA/MyHOME` `tests/fixtures/traces`, `14..16` occur only in the oracle-built fixture `issue_908/myhome_trace_oracle_myhomeserver1_extended_fancoil_off_14_16.json`, matching the updated note in [dimensions.md](../../functional/who-4-temperature-control/dimensions.md#dimension-19---valve-status)). Observed `#20` write/status pairs occur on `MyHomeServer1` (`2.87.13`) and do not establish universal `#20` write semantics across other gateways or actuator hardware beyond the PDF's read-only classification of `DIMENSION 20`.
+The wider retained-payload audit below found no `14..16`, `101..200`, `10..13` or `17..22` in its examined non-synthetic datasets. This result is limited to the recorded inventory and revisions, not all live or bench captures. The `1#3` write/status interval is 282.792 ms and the `2#3` interval is 24.241 ms; 46.353 ms separates the `1#3` status from the next `2#3` write, which concerns a different actuator. The earlier ~45 ms assertion was incorrect; the source does not establish a universal response-time guarantee.
 
 ## Inspected Gateway Firmware Binaries
 
@@ -117,3 +117,27 @@ In `MyHomeServer1` (`028206`), `bt_thermo_manager` emits `*#4*Z#N*#20*200##` for
 2. **Unmapped ranges (`23..99` and `> 200`) and empty-field `DIMENSION 19` emission (`*#4*1*19*0*##`)**: None of the five inspected gateway firmwares map `23..99` or values above `200` in the `DIMENSION 19` / `DIMENSION 20` / `#20` output tables. For an SCS byte outside both the discrete table and `0x80..0xE4` (such as `0x46`, `0x7F`, or `0xE5`), `DIMENSION 20` emits no frame on any of the five gateways, and `MH200N` (`010108`), `F454` (`020051`), and `MH202` (`010024`) abort translation and emit no frame on `DIMENSION 19`. In `MyHomeServer1` (`028206` `bt_termo`) and `F461` (`020011` `bt_termo`), however, the missed `CV` or `HV` table loop falls through with that side's string buffer left empty and still formats `*#4*WHERE*19*CV*HV##`, emitting a frame with an empty value field (for example `*#4*1*19*0*##` when `CV` maps to `0` and `HV` is `0x46`, `0x7F`, or `0xE5`). A reader of `DIMENSION 19` on `MyHomeServer1` or `F461` can therefore meet an empty value field when an out-of-table SCS byte arrives.
 3. **Live-plant coverage gap (`14..16`, `101..200`, `10..13`, `17..22`)**: Only `100` (and `0`) among the non-published or extended codes have been observed in sanitized live captures (`MyHomeServer1` `2.87.13`). Extended fan-coil OFF codes `14..16` (present in `OpenWebNet-HA/MyHOME` only in the oracle-built fixture `issue_908/myhome_trace_oracle_myhomeserver1_extended_fancoil_off_14_16.json`), proportional active values `101..200`, and discrete codes `10..13` and `17..22` remain firmware-verified only, without retained live-plant capture confirmation.
 4. **Protocol write classification**: The `WHO 4` v2.0.0 PDF classifies `DIMENSION 20` as read-only; observed `#20` write and `20` status pairs on `MyHomeServer1` (`2.87.13`) must not be generalized into universal `#20` commandability across gateways or actuators.
+
+
+## Wider retained-capture corpus audit
+
+A read-only audit on 21 November 2026 records the exact repository revisions, every selected path, Git blob, SHA-256, classification and payload counts in [the retained-corpus inventory](who4-output-capture-corpus-2026-11-21.json). The [audit helper](checks/audit_who4_output_capture_corpus.py) reproduces the inventory from clean checkouts at its pinned revisions; no raw log lines or device metadata are copied here.
+
+| Retained material | Immutable revision | Examined scope | Result for `10..13`, `14..16`, `17..22`, `101..200` |
+| --- | --- | --- | --- |
+| `OpenWebNet-HA/MyHOME` `v2-phase1-architecture` | `a881a4be711e7b8f03f044505c3810cfffcad403` | 201 retained fixture/log files: 123 capture-labelled, 69 other retained fixture/log files, 9 synthetic/oracle files; metadata prose is excluded from parsed payloads, with a separate lexical cross-check | No occurrences in the 192 non-synthetic files (2,341 output-payload occurrences); synthetic/oracle expectations are counted separately |
+| `OpenWebNet-HA/OWNd` | `d04e453ea99b2b5dcaf36b2bfccc073eda522c48` | `tests/test_f461_live_plant.py` `GATEWAY_FRAMES`, lines 32..68; subsequent unit assertions are not capture evidence | No occurrences in the 11 retained output payloads |
+
+The audit also inventories 272 MyHOME and 91 OWNd unit/golden context files separately. Those expectations do contain extended/proportional examples and cannot establish physical observations. Counts are literal retained occurrences, not independent events; logs/exports can duplicate observations. Origins are those described by the retained sources, not a new physical certification. Here, the non-synthetic inventory means files not marked synthetic/oracle: it includes the 69 origin-uncertified fixture/log files and does not certify them as physical captures. The absence is also confirmed by the full-text range cross-check in each selected file, avoiding a conclusion based solely on one JSON shape.
+
+The retained F461 `2.0.11` `GATEWAY_FRAMES` excerpt includes gateway-emitted `#20` frames with `0`, `1`, `5` and `8`. Thus the earlier open question about whether such frames occur outside MyHomeServer1 is already answered for this F461 capture. A separate question remains whether a particular gateway accepts a client-originated `#20` command; received gateway frames alone do not establish that capability.
+
+The Oracle repository was also inspected at `3c1634b00f8b165d1f63ddd4289171a9826ff501`. Its `f461-bench` / `mh200-bench` files are virtual plant configurations and simulator case sequences, with emulator result TSVs. The repository README explicitly distinguishes these virtual traces from physical plant captures. The inventory records 922 Oracle input/result/context files separately; none is promoted to a new physical observation. This inspection did not identify the separately named raw bench-capture archive.
+
+The separately mentioned `own-bench-captures` material was not available to this audit and is explicitly outside its claim. Deleted/history-only files, other branches/revisions, unretained traffic and future captures are also outside scope. No firmware binary was reanalysed or executed, and no hardware was operated. The existing static table evidence is reused for `c003276` with exact MyHomeServer1 `028206` / F461 `020011` scope; this is a provenance repair, not a claim of new disassembly.
+
+Reproduce after checking out the two pinned revisions:
+
+```sh
+python3 -B project/review/checks/audit_who4_output_capture_corpus.py --myhome /path/to/MyHOME --ownd /path/to/OWNd --oracle /path/to/own-firmware-oracle --output /tmp/who4-corpus-audit.json
+```

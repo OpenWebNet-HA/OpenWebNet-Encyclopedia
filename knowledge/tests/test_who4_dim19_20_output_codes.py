@@ -128,7 +128,17 @@ class Who4Dim19And20OutputCodesTests(unittest.TestCase):
         self.assertIn("read-only", boundary["statement"])
 
         c3276 = self.s12_claims["ownkb:claim:c003276"]
-        self.assertIn("no retained live-plant capture yet", c3276["statement"])
+        self.assertIn("MyHomeServer1 FW 028206", c3276["statement"])
+        self.assertIn("F461 FW 020011", c3276["statement"])
+        self.assertEqual("implementation", c3276["applicability"]["domain"])
+        self.assertEqual("specified", c3276["applicability"]["version"]["state"])
+        original = [p for p in c3276["provenance"] if "examination" in p]
+        self.assertEqual({"ownkb:source:s001220", "ownkb:source:s001223"},
+                         {p["source_id"] for p in original})
+        self.assertTrue(all(p["examination"]["method"] == "static_firmware_analysis"
+                            for p in original))
+        self.assertTrue(all(p["location"]["section_id"] == "ownkb:section:d000069:s000012"
+                            for p in original))
         self.assertNotIn("observed in real WHO 4 status responses", c3276["statement"])
 
     def test_live_capture_source_and_frame_line_spans(self) -> None:
@@ -154,6 +164,10 @@ class Who4Dim19And20OutputCodesTests(unittest.TestCase):
         self.assertIn("*#4*1#3*#20*100##", capture_claim["statement"])
         self.assertIn("*#4*2#3*20*100##", capture_claim["statement"])
         self.assertIn("*#4*2#1*#20*0##", capture_claim["statement"])
+        for interval in ("282.792", "24.241", "17.264"):
+            self.assertIn(interval, capture_claim["statement"])
+        self.assertIn("no response-time guarantee", capture_claim["statement"])
+        self.assertNotIn("~45 ms", capture_claim["statement"])
         spans = {
             (p["examination"]["code_location"]["start_line"], p["examination"]["code_location"]["end_line"])
             for p in capture_claim["provenance"]
@@ -227,6 +241,16 @@ class Who4Dim19And20OutputCodesTests(unittest.TestCase):
         self.assertEqual(("claimed", 13), (sections["ownkb:section:d000069:s000012"]["status"], sections["ownkb:section:d000069:s000012"]["claim_count"]))
         self.assertEqual(("claimed", 7), (sections["ownkb:section:d000069:s000013"]["status"], sections["ownkb:section:d000069:s000013"]["claim_count"]))
         self.assertEqual(("claimed", 14), (sections[SECTION]["status"], sections[SECTION]["claim_count"]))
+
+    def test_corpus_absence_is_bounded_and_original_sources_retained(self) -> None:
+        claim = self.by_id["ownkb:claim:c074200"]
+        for sid in {"ownkb:source:s001216", *EXPECTED_FIRMWARE,
+                    "ownkb:source:s001224", "ownkb:source:s001225"}:
+            self.assertIn(sid, {p["source_id"] for p in claim["provenance"]})
+        self.assertIn("separate bench captures", claim["statement"])
+        self.assertIn("a881a4be711e7b8f03f044505c3810cfffcad403", claim["statement"])
+        self.assertIn("d04e453ea99b2b5dcaf36b2bfccc073eda522c48", claim["statement"])
+        self.assertNotIn("Zero live plant captures across the curated corpus", claim["statement"])
 
 
 if __name__ == "__main__":
