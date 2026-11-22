@@ -140,7 +140,7 @@ Request `*#4*WHERE*19##`; response/event `*#4*WHERE*19*CV*HV##`. `CV` is the con
 | `5` | Fan-coil OFF |
 | `6`, `7`, `8` | Fan-coil ON at speed 1, 2, 3 |
 
-The published table defines values `0..8`; later information supplied by the MyHOME team documents additional fan-coil OFF-speed states `14`, `15`, and `16`. These extended values have been observed in real `WHO 4` status responses and complement the older public PDF rather than changing the `DIMENSION 19` frame structure.
+The published table defines values `0..8`; later information supplied by the MyHOME team documents additional fan-coil OFF-speed states `14`, `15`, and `16`. These extended values are emitted by the inspected `MyHomeServer1` `028206` and `F461` `020011` firmware tables and complement the older public PDF rather than changing the `DIMENSION 19` frame structure; retained-capture coverage is bounded by the [corpus audit](../../project/review/who4-dim19-20-output-codes.md#wider-retained-capture-corpus-audit).
 
 ## `DIMENSION 20` - actuator status
 
@@ -232,6 +232,28 @@ Temperature-looking values in `WHO 4` do not have one universal range or resolut
 Decoders and encoders should therefore select the temperature representation from the `DIMENSION`/operation definition, not from `WHO 4` alone.
 
 See [Addressing](addressing.md) for zone/probe/actuator forms, [`WHAT` Reference](what.md) for operating modes, [Cross-database functional coverage](../cross-database-coverage.md) for the implementation cross-reference, and [`DIMENSION`](../../protocol/dimensions.md) for the common `DIMENSION` frame classes.
+
+## Observed firmware and live output codes for `DIMENSION 19`, `DIMENSION 20`, and `#20`
+
+Published `WHO 4` v2.0.0 documentation defines `0..8` on `DIMENSION 19` and `DIMENSION 20`, documents `9` (`fan-coil ON`) only on `DIMENSION 20`, and classifies `DIMENSION 20` as read-only; live captures and static inspection of five gateway firmwares extend those operational tables without modifying the published specification boundary ([output-code evidence review](../../project/review/who4-dim19-20-output-codes.md)).
+
+Across all five inspected gateway firmwares (`MH200N` `010108`, `F454` `020051`, `MH202` `010024`, `MyHomeServer1` `028206`, and `F461` `020011`), the discrete lookup table maps 14 SCS actuator byte values (`0..13`: `'01'` to `0`, `'00'` to `1`, `'10'` to `2`, `'11'` to `3`, `'12'` to `4`, `'20'` to `5`, `'21'..'23'` to `6..8`, `'2F'` to `9`, `'30'..'32'` to `10..12`, `'3F'` to `13`) and emits `9` on `DIMENSION 19` (`CV` / `HV`) as well as `DIMENSION 20`.
+
+`MyHomeServer1` (`028206` `bt_termo`) and `F461` (`020011` `bt_termo`) expand the discrete lookup table to 23 entries (`0..22`) across `DIMENSION 19`, `DIMENSION 20`, and `#20`, adding `'24'..'26'` mapped to `14..16` (extended fan-coil OFF speeds `1..3`) and `'40'..'45'` mapped to `17..22`.
+
+In `MyHomeServer1` (`028206`), `bt_thermo_manager` classifies `{0, 3, 5, 13, 14, 15, 16, 17, 100}` as inactive and `{1, 2, 4, 6..12, 18..22, 101..200}` as active (including `4` = `Stop`), whereas `bt_thermo_central_unit` classifies `{0, 3, 5, 13, 17, 100}` as inactive (omitting `14..16` from its inactive set) and `101..200` as active (`1%..100%`).
+
+Proportional `0-10 V` SCS actuator bytes `0x80..0xE4` (`0%..100%`, encoded as `100 + pct` for codes `100..200`) are unsupported and dropped by `MH200N` (`010108`), emitted only on `DIMENSION 20` (and dropped on `DIMENSION 19`) by `F454` (`020051`) and `MH202` (`010024`), and emitted across `DIMENSION 19` (`CV` / `HV`), `DIMENSION 20`, and `#20` by `MyHomeServer1` (`028206`) and `F461` (`020011`).
+
+In `MyHomeServer1` (`028206`), `bt_thermo_manager` emits `*#4*Z#N*#20*200##` (`100%`) and `*#4*Z#N*#20*100##` (`0%`) and compares proportional fan-coil speeds against `speed_pct + 100`.
+
+Live sanitized capture of `MyHomeServer1` firmware `2.87.13` records spontaneous `#20` dimension writes followed by matching `20` status replies carrying `100` (`0%` proportional idle/OFF) on zone/actuator `1#3` (`*#4*1#3*#20*100##` and `*#4*1#3*20*100##`) and `2#3` (`*#4*2#3*#20*100##` and `*#4*2#3*20*100##`), alongside paired `0` (`OFF`) frames on `2#1` (`*#4*2#1*#20*0##` and `*#4*2#1*20*0##`). In this recording, the write/status intervals are `282.792 ms` for `1#3`, `24.241 ms` for `2#3`, and `17.264 ms` for `2#1`; these measurements do not establish a response-time guarantee.
+
+Actuator and catalogue labels for discrete slots `10..13` (`'30'..'32'`, `'3F'`) and `17..22` (`'40'..'45'`) remain `unresolved`; these codes are absent from the non-synthetic retained payloads covered by the corpus audit below, even though `MyHomeServer1` (`028206` `bt_thermo_manager`) classifies `13` and `17` as inactive and `10..12` and `18..22` as active.
+
+Output values `23..99` and values `> 200` have no mapping in the inspected `DIMENSION 19`, `DIMENSION 20`, or `#20` translators of `MH200N` (`010108`), `F454` (`020051`), `MH202` (`010024`), `MyHomeServer1` (`028206`), and `F461` (`020011`); for an unmapped SCS byte (such as `0x46`, `0x7F`, or `0xE5`), `DIMENSION 20` emits no frame on any of the five gateways and `MH200N` (`010108`), `F454` (`020051`), and `MH202` (`010024`) emit no frame on `DIMENSION 19`, whereas `MyHomeServer1` (`028206` `bt_termo`) and `F461` (`020011` `bt_termo`) leave the unmapped side empty and emit `*#4*WHERE*19*CV*HV##` with an empty value field (for example `*#4*1*19*0*##`).
+
+A [pinned retained-capture audit](../../project/review/who4-dim19-20-output-codes.md#wider-retained-capture-corpus-audit) of `MyHOME` at `a881a4be711e7b8f03f044505c3810cfffcad403` and the retained `F461` gateway-frame excerpt in `OWNd` at `d04e453ea99b2b5dcaf36b2bfccc073eda522c48` found no extended fan-coil OFF codes `14..16`, proportional codes `101..200`, or discrete codes `10..13` and `17..22` in the examined non-synthetic payloads and logs. Synthetic/oracle fixtures and derived test expectations were inventoried separately; the audit does not cover separate bench captures, other revisions or unretained traffic. Gateway-emitted `#20` frames are retained for both `MyHomeServer1` (`2.87.13`) and `F461` (`2.0.11`), but their presence does not establish universal client-originated `#20` command support beyond the published read-only classification of `DIMENSION 20`.
 
 ## Evidence basis
 
