@@ -81,12 +81,12 @@ In `4695` Firmware `01.01.03`, `$18 D1 <CU> 03 02 C1 <B5> <B6> <B7>` applies a s
 | --- | --- | --- | --- |
 | `01` / `11` / `21` | `00..02` | `*4*3101..3103*#0#C##`, `*4*1101..1103*#0#C##`, `*4*2101..2103*#0#C##` | Selects weekly program `1..3` (subject to `11`/`21` season filter); broadcasts `C0 11/21 00..02 <flags>` (`*4*110P/210P*#0#C##`) |
 | `01` | `FF` | `*4*3100*#0#C##` | Resumes stored active weekly program `1..3` in both seasons; broadcasts `C0 11/21 <prog> <flags>` |
-| `02` / `12` / `22` | `0A..4F` | `*#4*#0#C*#14*T*3/1/2##` | Sets manual setpoint `5.0..39.5 °C` (`B6 = T_celsius * 2`, subject to `12`/`22` season filter); broadcasts `C0 12/22 <B6> <flags>` (`*4*110#TTTT/210#TTTT*#0#C##`) |
+| `02` / `12` / `22` | `0A..46` | `*#4*#0#C*#14*T*3/1/2##` | Sets manual setpoint `5.0..35.0 °C` (`B6 = T_celsius * 2 <= 0x46`, subject to `12`/`22` season filter; `35.5..40.0 °C` `0x47..0x50` dropped with `TX=[]`); broadcasts `C0 12/22 <B6> <flags>` (`*4*110#TTTT/210#TTTT*#0#C##`) |
 | `03` / `13` / `23` | `00..0F`, `FF` | `*4*1201..3216*#0#C##`, `*4*3200*#0#C##` | Unimplemented (`TX=[]`); ignored by `4695` `01.01.03` |
 | `04` / `14` / `24` | `00..02` | `*4*115#1101..315#3103*#0#C##` | Selects `4695` scenario `1..3` (subject to `14`/`24` season filter); broadcasts `C0 14/24 00..02 <flags>` (`*4*115#110S/215#210S*#0#C##`) |
+| `05` / `15` / `25` | `01..FF`, `00` | `*4*13DDD#P..33DDD#P*#0#C##`, `*4*3000*#0#C##`, `*4*3000#P*#0#C##` | `B6 >= 01` with `B7 = 00..02` enters multi-day vacation (subject to `15`/`25` season filter) and broadcasts `C0 15/25 <days> <flags>` (`*4*13DDD/23DDD*#0#C##`); `B6 = 00` while in vacation exits back to weekly program `1..3` |
 | `06` / `16` / `26` | `00` | `*4*303*#0#C##`, `*4*103*#0#C##`, `*4*203*#0#C##` | Enters `OFF` (`303` universal; `103` Heating-only; `203` Cooling-only; `103`/`203` `NACK` on Gen A); broadcasts `C0 16/26 00 <flags>` |
 | `07` / `17` / `27` | `00` | `*4*302*#0#C##`, `*4*102*#0#C##`, `*4*202*#0#C##` | Enters Protection (`302` universal; `102` Heating-only; `202` Cooling-only); broadcasts `C0 17/27 00 <flags>` |
-| `08` / `18` / `28` / `0B` | any | `*4*13DDD#P..33DDD#P*#0#C##`, `*4*3000*#0#C##` | Unimplemented (`TX=[]`); ignored by `4695` `01.01.03` |
 | `F0` / `F1` | `00` | `*4*1*#0#C##` / `*4*0*#0#C##` | Same season: immediate no-op (`TX=[]`, leaves `OFF` untouched). Cross-season: switches season and enters Protection (`C0 17/27 00 <flags>` -> `*4*102/202*#0#C##`) |
 
 Status byte `B7` (`<flags>`) in `$18 D2 <CU> 03 04 C0 <B5> <B6> <B7>` carries six active status bits decoded identically across Generation B, C, and D gateways (`#0#C`) and Generation A (`#0`):
