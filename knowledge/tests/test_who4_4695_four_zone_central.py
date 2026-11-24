@@ -172,6 +172,58 @@ class Who4FourZoneCentralUnitTests(unittest.TestCase):
         oracle_rev = next(iter(revisions))
         self.assertIn(oracle_rev, self.review_text)
 
+    def test_holiday_program_and_mh202_exception_keep_original_evidence_scope(self) -> None:
+        holiday = self.by_id["ownkb:claim:c074210"]["statement"]
+        self.assertIn("daily Holiday mode", holiday)
+        self.assertIn("weekly return program 1..3", holiday)
+        self.assertNotIn("three scenarios", holiday)
+        # The original user manual describes the program resumed after Holiday,
+        # independently of the controller model's choice of opcode names.
+        self.assertIn("U1809F_U_EN.pdf", self.sources["ownkb:source:s000348"]["title"])
+        self.assertIn("`ownkb:source:s000348`", self.review_text)
+        self.assertIn("`ownkb:source:s000349`", self.review_text)
+        self.assertNotIn("`ownkb:source:s000319`", self.review_text)
+
+        actuator = self.by_id["ownkb:claim:c074204"]
+        self.assertIn("MH202 010024 returns NACK with no bus output", actuator["statement"])
+        self.assertNotIn("outbound *#4*#0#1*20## on Generation C and D", actuator["statement"])
+        # This exception is bound to the actual MH202 result, not inferred from
+        # the four-generation grouping or the clean-room central-unit model.
+        observations = [
+            p["examination"] for p in actuator["provenance"]
+            if p["source_id"] == "ownkb:source:s001252"
+        ]
+        self.assertEqual(1, len(observations))
+        self.assertEqual("qualifies", observations[0]["relationship"])
+        self.assertEqual((25, 25), (
+            observations[0]["code_location"]["start_line"],
+            observations[0]["code_location"]["end_line"],
+        ))
+
+    def test_simulated_controller_is_not_independent_firmware_corroboration(self) -> None:
+        plant_sources = {
+            f"ownkb:source:s{idx:06d}" for idx in (1241, 1245, 1247, 1249, 1251, 1254)
+        }
+        plant_observations = [
+            p["examination"] for claim in self.local for p in claim["provenance"]
+            if p["source_id"] in plant_sources
+        ]
+        self.assertTrue(plant_observations)
+        for exam in plant_observations:
+            self.assertEqual("qualifies", exam["relationship"])
+            self.assertEqual("interpretation", exam["conclusion_kind"])
+            self.assertEqual("gateway", exam["implementation_role"])
+            self.assertTrue(any("clean-room Python models" in c for c in exam["conditions"]))
+            self.assertTrue(any("original-controller execution remains unrecorded" in c
+                                for c in exam["limitations"]))
+        season = self.by_id["ownkb:claim:c074209"]
+        self.assertFalse(any(
+            p["evidence_class"] == "public_experiment"
+            and p["examination"]["relationship"] == "corroborates"
+            for p in season["provenance"]
+        ))
+        self.assertIn("No retained original-controller execution record is supplied", self.review_text)
+
     def test_sections_chunks_and_coverage_preserved(self) -> None:
         identities = json.loads((ROOT / "knowledge/inputs/identities.json").read_text(encoding="utf-8"))
         self.assertEqual(
