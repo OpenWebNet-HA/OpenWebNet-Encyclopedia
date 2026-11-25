@@ -175,6 +175,22 @@ class Who4FourZoneCentralUnitTests(unittest.TestCase):
         self.assertEqual("pypcode", rec["tool"]["engine"])
         self.assertEqual("M16C/60:LE:16:default", rec["tool"]["sleigh_language_id"])
         self.assertEqual(
+            "OpenWebNet-HA/own-firmware-oracle",
+            rec["tool"]["runner_repository"],
+        )
+        self.assertEqual("tools/pcode_4695.py", rec["tool"]["runner_path"])
+        self.assertEqual(
+            "bc227d34dd478840e79b3209f49790603c6bc5e4",
+            rec["tool"]["runner_commit"],
+        )
+        self.assertEqual(
+            "ad1d061acb2df397a149316afeb3c8a1906181a28d380620735bcd88640e7b1b",
+            rec["tool"]["runner_sha256"],
+        )
+        self.assertIn("python tools/pcode_4695.py", rec["tool"]["command"])
+        self.assertIn(rec["tool"]["runner_commit"], self.review_text)
+        self.assertIn(rec["tool"]["runner_sha256"], self.review_text)
+        self.assertEqual(
             EXPECTED_FIRMWARE["ownkb:source:s001226"][1],
             rec["firmware_under_test"]["flash_image_sha256"],
         )
