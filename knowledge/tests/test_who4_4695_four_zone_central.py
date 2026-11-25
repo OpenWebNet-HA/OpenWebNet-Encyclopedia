@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -118,16 +119,109 @@ class Who4FourZoneCentralUnitTests(unittest.TestCase):
             self.assertEqual(ver_label, loc["version"])
             self.assertIn(sha, self.review_text)
 
+        dynamic_4695 = []
         for claim in self.local:
             for p in claim["provenance"]:
                 if "examination" not in p:
                     continue
                 exam = p["examination"]
+                if exam["method"] == "dynamic_firmware_oracle":
+                    self.assertEqual("ownkb:source:s001226", p["source_id"])
+                    self.assertEqual("corroborates", exam["relationship"])
+                    self.assertEqual("firmware", exam["implementation_role"])
+                    self.assertEqual("firmware_oracle", exam["execution"]["material"])
+                    self.assertEqual(
+                        "project/review/who4-4695-pcode-execution.json",
+                        exam["execution"]["record_path"],
+                    )
+                    self.assertEqual(0, exam["artifact_location"]["start_offset"])
+                    self.assertEqual(0, exam["artifact_location"]["end_offset"])
+                    dynamic_4695.append((claim["id"], exam["execution"]["record_locator"]))
+                    continue
                 self.assertNotIn("execution", exam)
                 if p["source_id"] in EXPECTED_FIRMWARE:
                     self.assertEqual("static_firmware_analysis", exam["method"])
                     self.assertEqual(0, exam["artifact_location"]["start_offset"])
                     self.assertEqual(0, exam["artifact_location"]["end_offset"])
+        corroborated_claims = {cid for cid, _ in dynamic_4695}
+        self.assertEqual(
+            {
+                "ownkb:claim:c074201",
+                "ownkb:claim:c074202",
+                "ownkb:claim:c074203",
+                "ownkb:claim:c074204",
+                "ownkb:claim:c074207",
+                "ownkb:claim:c074208",
+                "ownkb:claim:c074209",
+                "ownkb:claim:c074210",
+                "ownkb:claim:c074211",
+                "ownkb:claim:c074212",
+                "ownkb:claim:c074213",
+                "ownkb:claim:c074214",
+            },
+            corroborated_claims,
+        )
+
+    def test_retained_original_4695_pcode_execution_record(self) -> None:
+        rec_path = ROOT / "project/review/who4-4695-pcode-execution.json"
+        raw = rec_path.read_text(encoding="utf-8")
+        self.assertEqual([], re.findall(r"0x[0-9A-Fa-f]{4,}", raw))
+        for forbidden in ("/Users/", "/home/", "/mnt/"):
+            self.assertNotIn(forbidden, raw)
+
+        rec = json.loads(raw)
+        self.assertEqual("dynamic_firmware_oracle", rec["method"])
+        self.assertEqual("firmware_oracle", rec["material"])
+        self.assertEqual("pypcode", rec["tool"]["engine"])
+        self.assertEqual("M16C/60:LE:16:default", rec["tool"]["sleigh_language_id"])
+        self.assertEqual(
+            EXPECTED_FIRMWARE["ownkb:source:s001226"][1],
+            rec["firmware_under_test"]["flash_image_sha256"],
+        )
+
+        suites = {s["suite_id"]: s for s in rec["suites"]}
+        self.assertEqual(
+            {
+                "suite:addressing-and-c2-boundaries",
+                "suite:c1-modes-holiday-vacation-and-season",
+                "suite:adc-battery-and-c0-status-flags",
+                "suite:dim14-bounds-queries-and-zone-sync",
+            },
+            set(suites),
+        )
+        steps = {
+            st["step_id"]: st
+            for s in rec["suites"]
+            for cfg in s["configurations"]
+            for st in cfg["steps"]
+        }
+        # Vacation entry, non-vacation ignore, and vacation exit to stored or explicit program
+        self.assertEqual([], steps["c1-21"]["observed_scs_tx"])
+        self.assertIn("$06D2010304C0150601", steps["c1-24"]["observed_scs_tx"])
+        self.assertEqual("vacation", steps["c1-24"]["state_after"]["operating_mode"])
+        self.assertIn("$06D2010304C0110101", steps["c1-25"]["observed_scs_tx"])
+        self.assertEqual("weekly_program", steps["c1-25"]["state_after"]["operating_mode"])
+        self.assertEqual([], steps["c1-26"]["observed_scs_tx"])
+        self.assertIn("$06D2010304C0110201", steps["c1-28"]["observed_scs_tx"])
+        self.assertEqual(3, steps["c1-28"]["state_after"]["weekly_program"])
+
+        # Manual setpoint upper boundary: 35.0 C accepted, 35.5 C and 40.0 C dropped
+        self.assertIn("$06D2010304C0124601", steps["dim14-02"]["observed_scs_tx"])
+        self.assertEqual(35.0, steps["dim14-02"]["state_after"]["central_setpoint_celsius"])
+        self.assertEqual([], steps["dim14-03"]["observed_scs_tx"])
+        self.assertEqual([], steps["dim14-04"]["observed_scs_tx"])
+        self.assertEqual(35.0, steps["dim14-04"]["state_after"]["central_setpoint_celsius"])
+
+        # Conditional built-in Zone C DIMENSION 12 emission on setpoint change vs unchanged repeat
+        self.assertIn("$06D201030412F100B4", steps["dim14-10"]["observed_scs_tx"])
+        self.assertNotIn("$06D201030412F100B4", steps["dim14-11"]["observed_scs_tx"])
+
+        # Periodic 10-bit AN0 backup-battery load test with 2-sample debounce -> C0 B7 bit 2 (0x04)
+        self.assertEqual(0, steps["adc-02"]["state_after"]["battery_fault_level"])
+        self.assertEqual(1, steps["adc-03"]["state_after"]["battery_fault_level"])
+        self.assertEqual(["$06D2010304C0122005"], steps["adc-04"]["observed_scs_tx"])
+        self.assertEqual(0, steps["adc-05"]["state_after"]["battery_fault_level"])
+        self.assertEqual(2, steps["adc-07"]["state_after"]["battery_fault_level"])
 
     def test_core_4695_and_gateway_protocol_facts(self) -> None:
         self.assertIn("ZA * 10 + ZB", self.by_id["ownkb:claim:c074201"]["statement"])
@@ -214,15 +308,23 @@ class Who4FourZoneCentralUnitTests(unittest.TestCase):
             self.assertEqual("interpretation", exam["conclusion_kind"])
             self.assertEqual("gateway", exam["implementation_role"])
             self.assertTrue(any("clean-room Python models" in c for c in exam["conditions"]))
-            self.assertTrue(any("original-controller execution remains unrecorded" in c
-                                for c in exam["limitations"]))
+            self.assertTrue(any(
+                "project/review/who4-4695-pcode-execution.json" in c
+                for c in exam["limitations"]
+            ))
         season = self.by_id["ownkb:claim:c074209"]
         self.assertFalse(any(
             p["evidence_class"] == "public_experiment"
             and p["examination"]["relationship"] == "corroborates"
             for p in season["provenance"]
         ))
-        self.assertIn("No retained original-controller execution record is supplied", self.review_text)
+        self.assertTrue(any(
+            p.get("source_id") == "ownkb:source:s001226"
+            and p.get("examination", {}).get("method") == "dynamic_firmware_oracle"
+            and p.get("examination", {}).get("relationship") == "corroborates"
+            for p in season["provenance"]
+        ))
+        self.assertIn("who4-4695-pcode-execution.json", self.review_text)
 
     def test_sections_chunks_and_coverage_preserved(self) -> None:
         identities = json.loads((ROOT / "knowledge/inputs/identities.json").read_text(encoding="utf-8"))
