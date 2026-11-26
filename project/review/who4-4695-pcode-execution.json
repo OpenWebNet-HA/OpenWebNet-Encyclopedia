@@ -11,7 +11,7 @@
     "runner_repository": "OpenWebNet-HA/own-firmware-oracle",
     "runner_path": "tools/pcode_4695.py",
     "runner_sha256": "ad1d061acb2df397a149316afeb3c8a1906181a28d380620735bcd88640e7b1b",
-    "command": "python tools/pcode_4695.py --fwz LH4695_AM5875_010103.fwz --mot 4695_010103.mot --flash-bin flat_0E0000_0FFFFF.bin --out who4-4695-pcode-execution.json",
+    "command": "python tools/pcode_4695.py --fwz LH4695_AM5875_010103.fwz --mot 4695_010103.mot --flash-bin flat_0E0000_0FFFFF.bin --runner-commit bc227d34dd478840e79b3209f49790603c6bc5e4 --out who4-4695-pcode-execution.json",
     "runner_commit": "bc227d34dd478840e79b3209f49790603c6bc5e4"
   },
   "firmware_under_test": {
